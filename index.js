@@ -11,7 +11,6 @@ exports.registerRoute = function (hook_name, args, cb) {
 exports.padLoad = function (hook_name, context, cb) {
     var pad = context.pad;
     if (pad.head === 0) {
-        console.log('stats inc');
         padsCount.inc(1);
     }
 };
