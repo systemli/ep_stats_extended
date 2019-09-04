@@ -8,7 +8,7 @@ exports.registerRoute = function (hook_name, args, cb) {
     });
 };
 
-exports.padLoad = function (hook_name, context, cb) {
+exports.padCreate = function (hook_name, context, cb) {
     var pad = context.pad;
     if (pad.head === 0) {
         padsCount.inc(1);
