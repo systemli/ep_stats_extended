@@ -3,9 +3,7 @@
     {
       "name": "ep_stats_extended",
       "hooks": {
-        "expressCreateServer": "ep_stats_extended/index:registerRoute",
-        "padCreate": "ep_stats_extended/index:padCreate",
-        "padRemove": "ep_stats_extended/index:padRemove"
+        "expressCreateServer": "ep_stats_extended/index:registerRoute"
       }
     }
   ]
