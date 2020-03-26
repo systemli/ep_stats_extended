@@ -11,6 +11,20 @@ stats.gauge('totalPads', function () {
   return pads.length
 })
 
+stats.gauge('pads', function () {
+  return {
+    'default': pads.filter(function (padID) {
+      return !padID.endsWith('-keep') && !padID.endsWith('-temp')
+    }).length,
+    'temp': pads.filter(function (padID) {
+      return padID.endsWith('-temp')
+    }).length,
+    'keep': pads.filter(function (padID) {
+      return padID.endsWith('-keep')
+    }).length
+  }
+})
+
 exports.registerRoute = function (hook_name, args, cb) {
   args.app.get('/stats', function (req, res) {
     res.json(stats.toJSON())

@@ -1,6 +1,6 @@
 {
   "name": "ep_stats_extended",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Extends Etherpad stats",
   "author": "Systemli Admin Team <admin@systemli.org>",
   "license": "GPLv3",
